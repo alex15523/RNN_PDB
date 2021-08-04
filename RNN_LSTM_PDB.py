@@ -108,8 +108,6 @@ print(x_test.shape)
 print(y_train.shape)
 print(y_test.shape)
 
-
-
 #RNN model, process training data against validaton data.
 model = Sequential()
 
@@ -122,7 +120,6 @@ model.add(Activation('softmax'))
 model.compile(loss="categorical_crossentropy", optimizer="adam", metrics= ['accuracy'])
 
 history = model.fit(x_train,y_train,epochs=50, batch_size=10, verbose=1, validation_data=(x_test,y_test))
-
 
 model.summary()
 
